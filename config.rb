@@ -31,11 +31,12 @@ page '/*.txt', layout: false
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+helpers do
+  def icons(size=24)
+    dimensions = "#{size}x#{size}"
+    Dir.entries("source/images/icons/#{dimensions}/") - ['.'] - ['..']
+  end
+end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
@@ -44,3 +45,5 @@ page '/*.txt', layout: false
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+#set :relative_assets, true
