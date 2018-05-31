@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           
-    <title><%= current_page.data.title || "Netbeans IDE Icons" %></title>
+    <title><%= "Netbeans IDE Icons - #{current_page.data.title}" %></title>
     
     <!-- Bootswatch Theme -->
     <%= stylesheet_link_tag 'https://bootswatch.com/4/cosmo/bootstrap.min.css' %>
@@ -19,6 +19,8 @@
     
     <div class="container m-5">
       <%= yield %>
+      
+      <%= partial 'footer' %>
     </div>
   </body>
   

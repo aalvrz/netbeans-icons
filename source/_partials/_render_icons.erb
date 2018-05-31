@@ -1,0 +1,7 @@
+<% icons(size=size).each_slice(20) do |icons| %>
+  <div class="row my-1">
+    <% icons.each do |icon| %>
+      <%= image_tag "icons/#{size}x#{size}/#{icon}", class: 'img-thumbnail mx-2' %>
+    <% end %>
+  </div>
+<% end %>

@@ -1,11 +1,7 @@
 ---
-title: Netbeans IDE Icons (24x24)
+title: (24x24)
 ---
 
-<% icons(size=24).each_slice(20) do |icons| %>
-  <div class="row">
-    <% icons.each do |icon| %>
-      <%= image_tag "icons/24x24/#{icon}", class: 'img-thumbnail mx-2' %>
-    <% end %>
-  </div>
-<% end %>
+<h2><strong>24x24</strong></h2>
+
+<%= partial('_partials/render_icons', locals: {size: 24}) %>
